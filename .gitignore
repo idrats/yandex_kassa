@@ -1,0 +1,12 @@
+.DS_Store
+.idea
+.dart_tool/
+.packages
+.pub/
+build/
+
+example/.idea
+example/.flutter-plugins
+example/.flutter-plugins-dependencies
+example/.packages
+example/build/

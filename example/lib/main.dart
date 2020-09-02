@@ -1,23 +1,3 @@
-# yandex_kassa
-
-Yandex.Kassa (Yandex.Checkout) plugin for both Android and iOS platforms.
-Implements Yandex Chekcout SDK for Flutter.
-
-Implementation Yandex Checkout SDK for Flutter.
-Official documentation can be found here:
-
-* [(Android)](https://github.com/yandex-money/yandex-checkout-android-sdk)
-* [(Ios)](https://github.com/yandex-money/yandex-checkout-payments-swift)
-
-Please, follow the [official documentation](https://kassa.yandex.ru/developers/payments/quick-start) for quick start.
-Note, that you need to get `.framework` files from Yandex Money support to use plugin for iOS.
-Don't forget to set them as `Embed & Sign` or `Embed Without Signing` at `Runner -> General -> Frameworks, Libraries and Embedded Content`
-
-## Example
-
-Demonstrated how use the plugin.
-
-```dart
 import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
@@ -37,9 +17,11 @@ class MyApp extends StatefulWidget {
 
 final idempotenceKey = 'some_unique_idempotence_key' +
     DateTime.now().microsecondsSinceEpoch.toString();
-const shopId = 'some_shop_id';
-const clientAppKey = 'live_MTkzODU2VY5GiyQq2GMPsCQ0PW7f_RSLtJYOT-mp_CA';
-const secretKey = 'your secret key';
+const shopId = '732903'; //'some_shop_id';
+const clientAppKey =
+    'test_NzMyOTAzaVjlEeQvWy6yTp3ed3DU94VzW4Cb9FuWclI'; //'live_MTkzODU2VY5GiyQq2GMPsCQ0PW7f_RSLtJYOT-mp_CA';
+const secretKey =
+    'test_-ywZU_E9PCAQYH-O7dpM8Z0v92EqItHjXzT0o-JFtRo'; //'your secret key';
 
 class _MyAppState extends State<MyApp> {
   final paymentParameters = PaymentParameters(
@@ -51,10 +33,11 @@ class _MyAppState extends State<MyApp> {
       paymentMethods: [PaymentMethod.bankCard, PaymentMethod.sberbank],
       applePayMerchantIdentifier: "merchant.ru.yandex.mobile.msdk.debug",
       androidColorScheme: IosColorScheme.redOrange,
-      iosTestModeSettings: IosTestModeSettings(charge: Amount(3.1415926)),
+      // iosTestModeSettings: IosTestModeSettings(charge: Amount(3.1415926)),
       googlePayParameters: GooglePayCardNetwork.values,
       shopId: shopId,
-      returnUrl: 'https://your.return/url',
+      returnUrl:
+          "https://4081d9747ee2.ngrok.io/v1.3/verifications/yandex_checkout",
       androidTestModeSettings: AndroidTestModeSettings(
           mockConfiguration: AndroidMockConfiguration(
               serviceFee: Amount(3.1415926),
@@ -182,8 +165,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-```
-
-TODO:
-
-* add card scanning

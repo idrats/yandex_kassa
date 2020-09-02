@@ -1,0 +1,81 @@
+PODS:
+  - Flutter (1.0.0)
+  - FunctionalSwift (1.1.2)
+  - When (4.0.0)
+  - yandex_kassa (0.0.1):
+    - Flutter
+    - YandexCheckoutPayments
+  - YandexCheckoutPayments (3.6.1):
+    - FunctionalSwift (~> 1.1.0)
+    - When (~> 4.0.0)
+    - YandexCheckoutPaymentsApi (~> 1.9.0)
+    - YandexCheckoutShowcaseApi (~> 1.2.0)
+    - YandexCheckoutWalletApi (~> 1.3.0)
+    - YandexLoginSDK (~> 2.0.0)
+    - YandexMobileMetrica/Dynamic (~> 3.7.0)
+    - YandexMoneyCoreApi (~> 1.7.0)
+  - YandexCheckoutPaymentsApi (1.9.0):
+    - FunctionalSwift (~> 1.1.0)
+    - YandexMoneyCoreApi (~> 1.7.0)
+  - YandexCheckoutShowcaseApi (1.2.0):
+    - FunctionalSwift (~> 1.1.0)
+    - YandexMoneyCoreApi (~> 1.7.0)
+  - YandexCheckoutWalletApi (1.3.0):
+    - FunctionalSwift (~> 1.1.0)
+    - YandexMoneyCoreApi (~> 1.7.0)
+  - YandexLoginSDK (2.0.2)
+  - YandexMobileMetrica/Dynamic (3.7.1):
+    - YandexMobileMetrica/Dynamic/Core (= 3.7.1)
+    - YandexMobileMetrica/Dynamic/Crashes (= 3.7.1)
+  - YandexMobileMetrica/Dynamic/Core (3.7.1)
+  - YandexMobileMetrica/Dynamic/Crashes (3.7.1):
+    - YandexMobileMetrica/Dynamic/Core
+  - YandexMoneyCoreApi (1.7.0):
+    - FunctionalSwift (~> 1.1.0)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - yandex_kassa (from `.symlinks/plugins/yandex_kassa/ios`)
+  - YandexCheckoutPayments (from `https://github.com/yandex-money/yandex-checkout-payments-swift.git`, tag `3.6.1`)
+
+SPEC REPOS:
+  trunk:
+    - FunctionalSwift
+    - When
+    - YandexCheckoutPaymentsApi
+    - YandexCheckoutShowcaseApi
+    - YandexCheckoutWalletApi
+    - YandexLoginSDK
+    - YandexMobileMetrica
+    - YandexMoneyCoreApi
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  yandex_kassa:
+    :path: ".symlinks/plugins/yandex_kassa/ios"
+  YandexCheckoutPayments:
+    :git: https://github.com/yandex-money/yandex-checkout-payments-swift.git
+    :tag: 3.6.1
+
+CHECKOUT OPTIONS:
+  YandexCheckoutPayments:
+    :git: https://github.com/yandex-money/yandex-checkout-payments-swift.git
+    :tag: 3.6.1
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  FunctionalSwift: 8ac888d5c2f2c0ce6bf7d48daea1408a8bfdd864
+  When: 4ffc88d535a094ad4bd5eaf2fd187de747e716d1
+  yandex_kassa: 31599404d662c87db14987da7bf56246f8fc0ba7
+  YandexCheckoutPayments: 43758dda43d14daf5cabf065a919cff9ae5b2796
+  YandexCheckoutPaymentsApi: 382ebb50d0eb9c83059d3912d584ba2389e53796
+  YandexCheckoutShowcaseApi: 44382163176b3a53692fa1c3b85c0c8d0a82b7e6
+  YandexCheckoutWalletApi: 29cf601b0bd6e88666b8815b306d785e3c9015b9
+  YandexLoginSDK: cd407482207b4b7da75c5f7d7fd2fdd6a604c325
+  YandexMobileMetrica: 95e93ee5af38520c9e470533dc8df6cf72fa171d
+  YandexMoneyCoreApi: 3d9364913ee91bf3f453d75c9d10fef3ccc9dc4f
+
+PODFILE CHECKSUM: 5777d3f3710347a88b88fe0037e1d6eb6ca3a1a9
+
+COCOAPODS: 1.9.3

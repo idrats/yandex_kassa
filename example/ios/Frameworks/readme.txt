@@ -1,0 +1,1 @@
+You shold add here TMXProfiling.framework and TMXProfilingConnections.framework from Yandex support
