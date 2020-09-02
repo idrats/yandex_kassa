@@ -2,7 +2,7 @@ name: yandex_kassa
 description: Yandex.Kassa (Yandex.Checkout) plugin for both Android and iOS platforms
 version: 1.0.0
 author: Ilya Drats (ybhyhen@gmail.com, i.drats@allfuneral.com)
-# homepage:
+homepage: https://github.com/idrats/yandex_kassa
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

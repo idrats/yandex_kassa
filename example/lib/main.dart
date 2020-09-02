@@ -17,11 +17,9 @@ class MyApp extends StatefulWidget {
 
 final idempotenceKey = 'some_unique_idempotence_key' +
     DateTime.now().microsecondsSinceEpoch.toString();
-const shopId = '732903'; //'some_shop_id';
-const clientAppKey =
-    'test_NzMyOTAzaVjlEeQvWy6yTp3ed3DU94VzW4Cb9FuWclI'; //'live_MTkzODU2VY5GiyQq2GMPsCQ0PW7f_RSLtJYOT-mp_CA';
-const secretKey =
-    'test_-ywZU_E9PCAQYH-O7dpM8Z0v92EqItHjXzT0o-JFtRo'; //'your secret key';
+const shopId = 'some_shop_id';
+const clientAppKey = 'live_MTkzODU2VY5GiyQq2GMPsCQ0PW7f_RSLtJYOT-mp_CA';
+const secretKey = 'your secret key';
 
 class _MyAppState extends State<MyApp> {
   final paymentParameters = PaymentParameters(
@@ -33,11 +31,10 @@ class _MyAppState extends State<MyApp> {
       paymentMethods: [PaymentMethod.bankCard, PaymentMethod.sberbank],
       applePayMerchantIdentifier: "merchant.ru.yandex.mobile.msdk.debug",
       androidColorScheme: IosColorScheme.redOrange,
-      // iosTestModeSettings: IosTestModeSettings(charge: Amount(3.1415926)),
+      iosTestModeSettings: IosTestModeSettings(charge: Amount(3.1415926)),
       googlePayParameters: GooglePayCardNetwork.values,
       shopId: shopId,
-      returnUrl:
-          "https://4081d9747ee2.ngrok.io/v1.3/verifications/yandex_checkout",
+      returnUrl: 'https://your.return/url',
       androidTestModeSettings: AndroidTestModeSettings(
           mockConfiguration: AndroidMockConfiguration(
               serviceFee: Amount(3.1415926),
