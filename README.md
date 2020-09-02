@@ -1,9 +1,7 @@
 # yandex_kassa
 
 Yandex.Kassa (Yandex.Checkout) plugin for both Android and iOS platforms.
-Implements Yandex Chekcout SDK for Flutter.
-
-Implementation Yandex Checkout SDK for Flutter.
+Implements Yandex Checkout SDK for Flutter.
 Official documentation can be found here:
 
 * [(Android)](https://github.com/yandex-money/yandex-checkout-android-sdk)
@@ -184,6 +182,6 @@ class _MyAppState extends State<MyApp> {
 }
 ```
 
-TODO:
+### TODO
 
 * add card scanning
