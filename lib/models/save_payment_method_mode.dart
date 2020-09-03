@@ -20,7 +20,11 @@ class SavePaymentMethodMode implements JsonEncodable {
   }
 
   String get value => _mode;
-  static const List<SavePaymentMethodMode> values = const [on, off, userSelects];
+  static const List<SavePaymentMethodMode> values = const [
+    on,
+    off,
+    userSelects
+  ];
 
   @override
   bool operator ==(dynamic other) {
