@@ -18,7 +18,7 @@ public class SwiftYandexKassaPlugin: NSObject, FlutterPlugin {
         if (call.method == "startCheckout" || call.method == "confirm3dsCheckout" || call.method == "startCheckoutWithCvcRepeatRequest") {
             
             guard let args = call.arguments else {
-                result(TonekizationResult(success: false, error: "iOS could not extract one of obligatory arguments " +
+                result(TokenizationResult(success: false, error: "iOS could not extract one of obligatory arguments " +
                     "(clientApplicationKey, paymentMethods, purchaseName, purchaseDescription, amount) \n" +
                     "in flutter channel method: (\(call.method))").toMap())
                 return
@@ -74,9 +74,9 @@ public class SwiftYandexKassaPlugin: NSObject, FlutterPlugin {
                     { (_ response: Result<PaymentData, PaymentProcessError>) in
                         switch response {
                         case .success(let res):
-                            result(TonekizationResult(success: true, data: res).toMap())
+                            result(TokenizationResult(success: true, data: res).toMap())
                         case .failure(let error):
-                            result(TonekizationResult(success: false, error: error.localizedDescription).toMap())
+                            result(TokenizationResult(success: false, error: error.localizedDescription).toMap())
                         }
                         vc.dismiss(animated: true, completion: nil)
                     }
@@ -103,9 +103,9 @@ public class SwiftYandexKassaPlugin: NSObject, FlutterPlugin {
                     { (_ response: Result<Bool, PaymentProcessError>) in
                         switch response {
                         case .success(_):
-                            result(TonekizationResult(success: true).toMap())
+                            result(TokenizationResult(success: true).toMap())
                         case .failure(let error):
-                            result(TonekizationResult(success: false, error: error.localizedDescription).toMap())
+                            result(TokenizationResult(success: false, error: error.localizedDescription).toMap())
                         }
                         vc.dismiss(animated: true, completion: nil)
                     }
@@ -126,15 +126,15 @@ public class SwiftYandexKassaPlugin: NSObject, FlutterPlugin {
                     { (_ response: Result<PaymentData, PaymentProcessError>) in
                         switch response {
                         case .success(let res):
-                            result(TonekizationResult(success: true, data: res).toMap())
+                            result(TokenizationResult(success: true, data: res).toMap())
                         case .failure(let error):
-                            result(TonekizationResult(success: false, error: error.localizedDescription).toMap())
+                            result(TokenizationResult(success: false, error: error.localizedDescription).toMap())
                         }
                         vc.dismiss(animated: true, completion: nil)
                     }
                 }
             } else {
-                result(TonekizationResult(success: false, error: "iOS could not extract one of obligatory arguments " +
+                result(TokenizationResult(success: false, error: "iOS could not extract one of obligatory arguments " +
                     "(clientApplicationKey, paymentMethods, purchaseName, purchaseDescription, amount) \n" +
                     "in flutter channel method: (\(call.method))").toMap())
             }
