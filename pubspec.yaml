@@ -1,6 +1,6 @@
 name: yandex_kassa
 description: Yandex.Kassa (Yandex.Checkout) plugin for both Android and iOS platforms
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/idrats/yandex_kassa
 repository: https://github.com/idrats/yandex_kassa
 
