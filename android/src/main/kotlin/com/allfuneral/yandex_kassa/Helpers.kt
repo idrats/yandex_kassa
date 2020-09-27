@@ -64,11 +64,12 @@ fun fetchGooglePayParameters(parameters: List<String>?): Set<GooglePayCardNetwor
 }
 
 
-fun fetchMockConfiguration(data: HashMap<*, *>?): MockConfiguration {
-    val completeWithError = data?.get("complete_with_error") as Boolean?
-    val paymentAuthPassed = data?.get("payment_auth_passed") as Boolean?
-    val cardsCount = data?.get("cards_count") as Int?
-    val amount = data?.get("amount") as HashMap<*, *>?
+fun fetchMockConfiguration(data: HashMap<*, *>?): MockConfiguration? {
+    if (data == null) return null
+    val completeWithError = data["complete_with_error"] as Boolean?
+    val paymentAuthPassed = data["payment_auth_passed"] as Boolean?
+    val cardsCount = data["cards_count"] as Int?
+    val amount = data["amount"] as HashMap<*, *>?
     return MockConfiguration(completeWithError = completeWithError ?: false,
             paymentAuthPassed = paymentAuthPassed ?: false,
             linkedCardsCount = cardsCount ?: 0,
